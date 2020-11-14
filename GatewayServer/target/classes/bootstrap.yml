@@ -1,0 +1,18 @@
+server:
+  port: 8055
+spring:
+  application:
+    name: gateway-cloud
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      routes:
+          uri: lb://provider-cloud # 攔截到後轉給這個微服務，有沒有 port 都可以
+          predicates:
+            #- Path=/test/** # /test 下的路徑都會被 gateway 攔截到，但因為只有 /test 才會被抓到，不方便
+            # 用 filters 的 StripPrefix 可解決
+            - Path=/xxx/**
+          filters:
+            - StripPrefix=1 #忽略 predicates 的 Path 的第一個
