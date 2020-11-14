@@ -6,7 +6,9 @@
 		<module>DiscoveryConsumer</module>
 		<module>DiscoveryProvider</module>
         <module>DiscoveryProvider2</module>
-    </modules>
+		<module>ConsumerOpenFeign</module>
+		<module>ConsumerWebflux</module>
+	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
