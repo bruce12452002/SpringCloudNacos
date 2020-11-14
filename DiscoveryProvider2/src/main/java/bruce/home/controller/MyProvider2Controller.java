@@ -5,15 +5,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class MyProviderController {
+public class MyProvider2Controller {
     @Value("${server.port}")
     private int port;
 
-
-    @GetMapping("/test")
-    public String test1(String name) {
-        return "Hi!" + name;
-    }
 
     @GetMapping("/port")
     public String port() { // 測試生產者集群
