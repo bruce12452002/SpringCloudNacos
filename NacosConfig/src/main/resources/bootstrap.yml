@@ -1,0 +1,11 @@
+# config 最好都設定在 bootstrap，否則有些不生效，注意看控制台的訊息
+spring:
+  application:
+    name: nacos-cloud
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yml
+  profiles:
+    active: dev
