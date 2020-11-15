@@ -9,6 +9,7 @@
 		<module>ConsumerOpenFeign</module>
 		<module>ConsumerWebflux</module>
         <module>GatewayServer</module>
+        <module>NacosConfig</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>

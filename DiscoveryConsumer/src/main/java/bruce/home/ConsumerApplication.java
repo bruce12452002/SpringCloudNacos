@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 public class ConsumerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ConsumerOpenFeignApplication.class, args);
+        SpringApplication.run(ConsumerApplication.class, args);
     }
 
     @Bean

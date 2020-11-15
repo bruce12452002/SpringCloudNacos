@@ -34,6 +34,7 @@ public class MyConsumerController {
 
     @GetMapping("/testProviderPort")
     public String testProviderPort() {
+        // 以下代碼是用方法二的
         return template.getForObject("http://provider-cloud" + "/port", String.class);
     }
 }
