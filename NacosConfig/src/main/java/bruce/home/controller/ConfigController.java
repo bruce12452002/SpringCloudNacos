@@ -14,8 +14,11 @@ public class ConfigController {
     @Value("${name2:沒有name2}")
     private String name2;
 
+    @Value("${name3:沒有name3}")
+    private String name3;
+
     @GetMapping("/testConfig")
     public String test() {
-        return name1 + "---" + name2;
+        return name1 + "---" + name2 + "---" + name3;
     }
 }

@@ -7,5 +7,9 @@ spring:
       config:
         server-addr: 127.0.0.1:8848
         file-extension: yml
+        # group:
+        # namespace: 命名空間的 ID
+        shared-dataids: common.properties # 微服務共用的設定，會先加載，如果自己設定的 key 和共用的一樣，自己的設定會覆蓋
+        refreshable-dataids: common.properties # 預設公用的設定一改不會刷新，可加這個
   profiles:
     active: dev
