@@ -10,3 +10,11 @@ public interface MyOpenFeignService {
     @GetMapping("/test")
     String getFeignResult(@RequestParam("name") String xxx);
 }
+
+// 如果想要使用 gateway 的設定，只要指定 gateway 的微服務名即可
+// 再如果 gateway 有設定 predicates -> path 和 filters，可以加在 path 或 @GetMapping
+//@FeignClient(value = "gateway-cloud", path = "/xxx")
+//public interface MyOpenFeignService {
+//    @GetMapping("/test")
+//    String getFeignResult(@RequestParam("name") String xxx);
+//}
