@@ -15,4 +15,9 @@ public class MyOpenFeignController {
     public String testOpenFeign(String name) {
         return openFeignService.getFeignResult(name);
     }
+
+    @GetMapping("/testTimeout")
+    public String testTimeout() {
+        return openFeignService.timeout();
+    }
 }

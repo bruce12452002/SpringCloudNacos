@@ -9,6 +9,9 @@ public interface MyOpenFeignService {
     // @RequestParam 一定要寫，否則 405，而且參數名稱和 @GetMapping 也必需和提供的微服務方法一致
     @GetMapping("/test")
     String getFeignResult(@RequestParam("name") String xxx);
+
+    @GetMapping("/testOpenFeignTimeout")
+    String timeout();
 }
 
 // 如果想要使用 gateway 的設定，只要指定 gateway 的微服務名即可

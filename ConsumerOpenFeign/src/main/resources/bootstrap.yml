@@ -7,3 +7,5 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+ribbon:
+  ReadTimeout: 5000 # OpenFeign 底層是 ribbon，預設 1 秒，如果業務上真的超過就可以設定
