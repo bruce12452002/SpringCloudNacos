@@ -1,10 +1,13 @@
 package bruce.home.controller;
 
+import bruce.home.bean.Animal;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.concurrent.TimeUnit;
+
 
 @RestController
 public class MyProviderController {
@@ -30,5 +33,21 @@ public class MyProviderController {
             e.printStackTrace();
         }
         return "Success!";
+    }
+
+
+    @PostMapping(value = "/testUpload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public String uploadTxtFileOrImage(@RequestPart("file") MultipartFile file) {
+        return "uploadTxtFileOrImage success";
+    }
+
+    @PostMapping(value = "/testJsonUploadAndTransfer")
+    public String JsonUploadAndTransfer(@RequestBody Animal animal) {
+        return "bean success!";
+    }
+
+    @PostMapping(value = "/testUploadAndJson", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    String testUploadAndJson(@RequestBody Animal animal, @RequestPart("file") MultipartFile file) {
+        return "beanAndFile success!";
     }
 }
