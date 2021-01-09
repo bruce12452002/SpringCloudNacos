@@ -10,6 +10,7 @@
 		<module>ConsumerWebflux</module>
         <module>GatewayServer</module>
         <module>NacosConfig</module>
+        <module>Sentinel</module>
     </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -28,6 +29,7 @@
 		<java.version>11</java.version>
 		<spring-cloud.version>Hoxton.SR4</spring-cloud.version>
 		<nacos.version>2.2.3.RELEASE</nacos.version>
+		<alibaba.version>2.2.1.RELEASE</alibaba.version>
 	</properties>
 
 <!--	<dependencies>-->
@@ -49,6 +51,14 @@
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
 				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba.cloud</groupId>
+				<artifactId>spring-cloud-alibaba-dependencies</artifactId>
+				<version>${alibaba.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>

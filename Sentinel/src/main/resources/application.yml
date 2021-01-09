@@ -1,0 +1,10 @@
+server:
+  port: 8056
+spring:
+  cloud:
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:9090 #對應 sentinel 的 port
+      #eager: true
+      #web-context-unify: false #無效
