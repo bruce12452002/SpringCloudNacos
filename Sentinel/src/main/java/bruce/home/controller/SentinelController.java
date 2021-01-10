@@ -26,6 +26,7 @@ public class SentinelController {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        System.out.println("aaaaaaaaaaa");
         return "hello thread";
     }
 

@@ -29,7 +29,7 @@
 		<java.version>11</java.version>
 		<spring-cloud.version>Hoxton.SR4</spring-cloud.version>
 		<nacos.version>2.2.3.RELEASE</nacos.version>
-		<alibaba.version>2.2.1.RELEASE</alibaba.version>
+		<alibaba.version>2.2.2.RELEASE</alibaba.version>
 	</properties>
 
 <!--	<dependencies>-->

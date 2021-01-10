@@ -19,16 +19,16 @@ public class SentinelApplication {
      * https://github.com/alibaba/Sentinel/issues/1213
      * 上面的網址有說在某個版本之後用 spring.cloud.sentinel.web-context-unify=false 也可以成功，但我試的根本沒用，也不報錯
      */
-    @Bean
-    public FilterRegistrationBean<CommonFilter> sentinelFilterRegistration() {
-        FilterRegistrationBean<CommonFilter> registration = new FilterRegistrationBean<>();
-        registration.setFilter(new CommonFilter());
-        registration.addUrlPatterns("/*");
-        // 入口资源关闭聚合
-        registration.addInitParameter(CommonFilter.WEB_CONTEXT_UNIFY, "false");
-        registration.setName("sentinelFilter");
-        registration.setOrder(1);
-        return registration;
-    }
+//    @Bean
+//    public FilterRegistrationBean<CommonFilter> sentinelFilterRegistration() {
+//        FilterRegistrationBean<CommonFilter> registration = new FilterRegistrationBean<>();
+//        registration.setFilter(new CommonFilter());
+//        registration.addUrlPatterns("/*");
+//        // 入口资源关闭聚合
+//        registration.addInitParameter(CommonFilter.WEB_CONTEXT_UNIFY, "false");
+//        registration.setName("sentinelFilter");
+//        registration.setOrder(1);
+//        return registration;
+//    }
 
 }
