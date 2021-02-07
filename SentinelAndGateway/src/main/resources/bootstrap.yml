@@ -1,0 +1,24 @@
+server:
+  port: 8057
+spring:
+  application:
+    name: sentinel-gateway-cloud
+  main:
+    allow-bean-definition-overriding: true # 因為報錯的提示，才加的
+  cloud:
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:9090 #對應 sentinel 的 port
+      eager: true
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      routes:
+        - id: sentinel_gateway_bruce
+          uri: lb://provider-cloud
+          predicates:
+            - Path=/xxx/**
+          filters:
+            - StripPrefix=1
