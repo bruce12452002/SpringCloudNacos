@@ -26,6 +26,7 @@ import java.util.List;
 import java.util.Set;
 
 // 沒有 sentinel 整合 gateway 時，用手寫的方式
+// 啟動時會自動抓裡面的配置，相當於預設值
 //@Configuration
 public class GatewayConfiguration {
 
