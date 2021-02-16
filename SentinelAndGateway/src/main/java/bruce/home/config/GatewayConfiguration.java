@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.Set;
 
 // 沒有 sentinel 整合 gateway 時，用手寫的方式
-// 啟動時會自動抓裡面的配置，相當於預設值
+// 整合了也會抓裡面的值，啟動時會自動抓，相當於預設值
 //@Configuration
 public class GatewayConfiguration {
 
@@ -79,8 +79,8 @@ public class GatewayConfiguration {
         Set<GatewayFlowRule> rules = new HashSet<>();
         rules.add(new GatewayFlowRule("sentinel_gateway_bruce")
                 .setResourceMode(SentinelGatewayConstants.RESOURCE_MODE_CUSTOM_API_NAME)
-                .setCount(1)//2
-                .setIntervalSec(1)//2
+                .setCount(5)
+                .setIntervalSec(2)
                 .setParamItem(new GatewayParamFlowItem()
                         .setParseStrategy(SentinelGatewayConstants.PARAM_PARSE_STRATEGY_CLIENT_IP)
                 )
