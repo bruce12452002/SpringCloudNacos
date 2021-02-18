@@ -6,9 +6,9 @@ sentinel 啟動命令：
 java -Dserver.port=9090 -jar sentinel-dashboard-1.8.0.jar
 
 gateway VM 參數：
--Dcsp.sentinel.dashboard.server=localhost:9090 -Dcsp.sentinel.app.type=1
+-Dcsp.sentinel.app.type=1
 
 
-sentinel 畫面的「API 管理」的設定
+sentinel 畫面的「API 管理」的設定，此例必需先啟DiscoveryProvider專案
 精確：/xxx/port
 前綴：/xxx/*
