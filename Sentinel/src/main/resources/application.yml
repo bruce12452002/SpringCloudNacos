@@ -8,3 +8,13 @@ spring:
         dashboard: localhost:9090 #對應 sentinel 的 port
       eager: true
       web-context-unify: false #無效
+      datasource:
+        flow-test: #可以隨便打
+          nacos:
+            server-addr: localhost:8848
+            username: nacos
+            password: nacos
+            dataId: flow-rules
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow # org.springframework.cloud.alibaba.sentinel.datasource.RuleType

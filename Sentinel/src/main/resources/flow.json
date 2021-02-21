@@ -1,0 +1,19 @@
+[
+  {
+    "resource": "/xxx",
+    "limitApp": "default",
+    "grade": 1,
+    "count": 2,
+    "clusterMode": false,
+    "strategy": 0,
+    "controlBehavior": 0
+  }
+]
+
+resource 資源名
+limitApp 針對來源，default 表示不區分調用來源
+grade 閾值類型 0：線程數 1：QPS
+count 單機閾值
+clusterMode 是否集群
+strategy 流控模式
+controlBehavior 流控效果
