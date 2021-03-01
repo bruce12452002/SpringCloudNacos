@@ -1,0 +1,22 @@
+[
+  {
+    "resourceMode": 0,      //API 類型：0 Route ID、1 API 分組
+    "resource": "register_limit", //API 名稱
+    "grade": 1, //閾值類型：0 線程數、1 QPS
+    "count": 3, //單機閾值
+    "interval": 5, //間隔-----------------------
+    "intervalUnit": 1, //秒分時天0~3
+    "paramItem": [
+      {
+        "parseStrategy": 2,    //參數屬性：0 Client IP、1 Remote Host、2 Header、3 URL 參數、4 Cookie
+        "fieldName": "/"       //Header、URL 參數、Cookie 才有用
+      }
+    ]
+  },
+  {
+    "resourceMode": 1,
+    "resource": "register_limit",
+    "grade": 0,
+    "count": 1
+  }
+]

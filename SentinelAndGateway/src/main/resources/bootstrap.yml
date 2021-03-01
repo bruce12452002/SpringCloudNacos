@@ -10,6 +10,28 @@ spring:
       transport:
         port: 8719
         dashboard: localhost:9090 #對應 sentinel 的 port
+        #eager: true
+        datasource:
+          gw-api-test:
+            nacos:
+              server-addr: localhost:8848
+              #namespace: namespaceID，只有一個 namespace 可以不寫
+              username: nacos
+              password: nacos
+              dataId: gw-api-rules.json
+              groupId: DEFAULT_GROUP
+              data-type: json
+              rule-type: gw-api-group
+          gw-flow-test:
+            nacos:
+              server-addr: localhost:8848
+              #namespace: namespaceID，只有一個 namespace 可以不寫
+              username: nacos
+              password: nacos
+              dataId: gw-flow-rules.json
+              groupId: DEFAULT_GROUP
+              data-type: json
+              rule-type: gw-flow
       eager: true
     nacos:
       discovery:

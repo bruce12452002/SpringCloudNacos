@@ -1,0 +1,11 @@
+[
+  {
+    "apiName": "register_limit",   API 名稱
+    "predicateItems": [
+      {
+        "matchStrategy": 0,    匹配模式：0 精確、1 前綴、2 正則
+        "pattern": "/memberWeb/init/register"    匹配串
+      }
+    ]
+  }
+]
