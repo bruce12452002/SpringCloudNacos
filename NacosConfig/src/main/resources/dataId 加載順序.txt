@@ -5,7 +5,8 @@ Data Id 預設是 spring.application.name，不想用這個可以設定 spring.c
 本機的 bootstrap.properties
 本機的 application.yml
 本機的 application.properties
-nacos 的 nacos-cloud
-nacos 的 nacos-cloud.yml
-nacos 的 nacos-cloud-dev.yml
+nacos 的 nacos-cloud (配置格式為 yml 或 properties)
+nacos 的 nacos-cloud.yml (配置格式為 yml 或 properties)
+nacos 的 nacos-cloud-dev.yml (配置格式為 yml 或 properties)
 覆蓋指的是一個一個屬性覆蓋，不是整個檔案覆蓋
+最後三個 nacos，畫面有配置格式要選對，spring.cloud.nacos.config.file-extension 對應的是這個配置格式，不是 Data Id 的檔名
