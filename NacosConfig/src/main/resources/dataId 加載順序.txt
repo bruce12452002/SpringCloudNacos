@@ -1,0 +1,11 @@
+Data Id 預設是 spring.application.name，不想用這個可以設定 spring.cloud.nacos.config.prefix
+假設 spring.application.name=nacos-cloud, 而 spring.profiles.active=dev
+加載順序如下(後者會蓋前者)：
+本機的 bootstrap.yml
+本機的 bootstrap.properties
+本機的 application.yml
+本機的 application.properties
+nacos 的 nacos-cloud
+nacos 的 nacos-cloud.yml
+nacos 的 nacos-cloud-dev.yml
+覆蓋指的是一個一個屬性覆蓋，不是整個檔案覆蓋
